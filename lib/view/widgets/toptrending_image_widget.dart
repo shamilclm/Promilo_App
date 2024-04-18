@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:promilo_task/view/pages/description_page.dart';
 
 class TopImageWidget extends ConsumerWidget {
   TopImageWidget({super.key});
@@ -15,6 +16,8 @@ class TopImageWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return InkWell(
+      onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => DescriptionPage())),
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: SizedBox(
@@ -32,18 +35,18 @@ class TopImageWidget extends ConsumerWidget {
                     Image.network(
                       imageUrl,
                       fit: BoxFit.cover,
-                      width: 8 * 22.5,
-                      height: 8 * 25,
+                      width: 180,
+                      height: 200,
                     ),
                     Positioned(
-                      top: 8 * 16.25,
+                      top: 130,
                       right: 0,
                       child: ClipRRect(
                         borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(8)),
                         child: Container(
-                          width: 8 * 7.5,
-                          height: 8 * 7.5,
+                          width: 60,
+                          height: 60,
                           color: Colors.white,
                           child: Padding(
                             padding: const EdgeInsets.only(left: 8),

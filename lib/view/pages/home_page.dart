@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:promilo_task/view/widgets/bot_navigation_widget.dart';
 import 'package:promilo_task/view/widgets/homepage_imageslider_widget.dart';
 import 'package:promilo_task/view/widgets/toptrending_image_widget.dart';
 import 'package:promilo_task/view/widgets/trendingcard_widget.dart';
@@ -52,11 +54,21 @@ class HomePage extends StatelessWidget {
                 height: 10,
               ),
               const SizedBox(height: 230, child: CardWidget()),
+              const SizedBox(
+                height: 10,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Top Trending meetups",
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              ),
               TopImageWidget()
             ],
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBarWidget(),
     );
   }
 }
