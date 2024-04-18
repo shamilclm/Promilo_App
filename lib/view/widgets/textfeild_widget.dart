@@ -26,13 +26,19 @@ class TextFieldWidget extends StatelessWidget {
           padding: const EdgeInsets.only(left: 8),
           child: Text(
             fieldhead,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         TextFormField(
+          validator: (value) {
+            if (value!.isEmpty) {
+              return 'This field is Required';
+            }
+            return null;
+          },
           decoration: InputDecoration(
               hintText: hinttext,
               border: OutlineInputBorder(
@@ -60,7 +66,7 @@ class TextFieldWidget extends StatelessWidget {
                       ),
                     ],
                   )
-                : Text(''),
+                : const Text(''),
             Text(
               fieldtail,
               style: const TextStyle(

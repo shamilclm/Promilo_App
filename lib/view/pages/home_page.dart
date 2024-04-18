@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:promilo_task/view/widgets/homepage_imageslider_widget.dart';
+import 'package:promilo_task/view/widgets/toptrending_image_widget.dart';
+import 'package:promilo_task/view/widgets/trendingcard_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,9 +13,49 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
         ),
-        title: Text("Individual meetup"),
+        title: const Text("Individual meetup"),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+                child: TextField(
+                  decoration: InputDecoration(
+                      suffixIcon: const Icon(Icons.mic_none),
+                      labelText: "Search",
+                      prefixIcon: const Icon(
+                        Icons.search,
+                        size: 30,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(0),
+                      )),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const HomePageImageSliderWidget(),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Trending popular people",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const SizedBox(height: 230, child: CardWidget()),
+              TopImageWidget()
+            ],
+          ),
+        ),
       ),
     );
   }
