@@ -7,9 +7,11 @@ class SubmitButtonWidget extends HookConsumerWidget {
   final GlobalKey<FormState> formKey;
   final String email;
   final String password;
+  final Color backgroundcolor;
   const SubmitButtonWidget(
       {required this.formKey,
       required this.password,
+      required this.backgroundcolor,
       super.key,
       required this.email});
 
@@ -19,8 +21,8 @@ class SubmitButtonWidget extends HookConsumerWidget {
         style: ElevatedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-            side: const BorderSide(color: Colors.blue, width: 3),
-            backgroundColor: const Color.fromARGB(255, 181, 179, 179),
+            side: const BorderSide(color: AppTheme.button, width: 3),
+            backgroundColor: backgroundcolor,
             minimumSize: Size(MediaQuery.sizeOf(context).width, 55)),
         onPressed: () {
           if (formKey.currentState!.validate()) {
@@ -29,7 +31,7 @@ class SubmitButtonWidget extends HookConsumerWidget {
         },
         child: const Text(
           "Submit",
-          style: TextStyle(color: AppTheme.submitBtn, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 20),
         ));
   }
 }

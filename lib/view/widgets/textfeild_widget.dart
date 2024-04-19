@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:promilo_task/core/theme/app_theme.dart';
 
 class TextFieldWidget extends StatelessWidget {
   final bool ischecked;
   final String hinttext;
   final String fieldhead;
   final String fieldtail;
+  late ValueNotifier<bool> isEnabled;
 
   final TextEditingController controller;
 
-  const TextFieldWidget({
+  TextFieldWidget({
     super.key,
     required this.hinttext,
     required this.fieldhead,
     required this.controller,
     required this.ischecked,
     required this.fieldtail,
+    required this.isEnabled,
   });
 
   @override
@@ -33,6 +36,13 @@ class TextFieldWidget extends StatelessWidget {
           height: 5,
         ),
         TextFormField(
+          onChanged: (value) {
+            if (value.isEmpty) {
+              isEnabled.value = false;
+            } else {
+              isEnabled.value = true;
+            }
+          },
           validator: (value) {
             if (value!.isEmpty) {
               return 'This field is Required';
@@ -70,7 +80,7 @@ class TextFieldWidget extends StatelessWidget {
             Text(
               fieldtail,
               style: const TextStyle(
-                  color: Colors.blue,
+                  color: AppTheme.button,
                   fontWeight: FontWeight.bold,
                   fontSize: 16),
             ),

@@ -11,6 +11,8 @@ class LoginPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final isEnabled = useState<bool>(false);
+
     final formKey = useMemoized(() => GlobalKey<FormState>());
 
     final emailController =
@@ -43,6 +45,7 @@ class LoginPage extends HookConsumerWidget {
                   height: 30,
                 ),
                 TextFieldWidget(
+                  isEnabled: isEnabled,
                   ischecked: false,
                   hinttext: 'Enter or Mob NO',
                   fieldhead: 'please sign in to continue',
@@ -53,6 +56,7 @@ class LoginPage extends HookConsumerWidget {
                   height: 12,
                 ),
                 TextFieldWidget(
+                  isEnabled: isEnabled,
                   ischecked: true,
                   hinttext: 'Enter Password',
                   fieldhead: 'Password',
@@ -66,6 +70,8 @@ class LoginPage extends HookConsumerWidget {
                   formKey: formKey,
                   password: passWordController.text,
                   email: emailController.text,
+                  backgroundcolor:
+                      isEnabled.value ? AppTheme.button : AppTheme.submitBtn,
                 ),
                 const SizedBox(
                   height: 30,
@@ -124,13 +130,13 @@ class LoginPage extends HookConsumerWidget {
                   textAlign: TextAlign.center,
                   text: const TextSpan(
                       text: "By continuing, you agree to\npromilo,s",
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                      style: TextStyle(fontSize: 14, color: AppTheme.grey),
                       children: [
                         TextSpan(
                             text: " Terms of Use & Privacy policy",
                             style: TextStyle(
                                 fontSize: 14,
-                                color: Colors.black,
+                                color: AppTheme.black,
                                 fontWeight: FontWeight.w600))
                       ]),
                 )
