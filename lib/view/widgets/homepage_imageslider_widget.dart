@@ -74,9 +74,10 @@ class HomePageImageSliderWidget extends ConsumerWidget {
                       dotsCount: 1,
                       position: 0,
                       decorator: DotsDecorator(
-                        color: Colors.black,
-                        activeColor:
-                            index == currentIndex ? Colors.black : Colors.grey,
+                        color: AppTheme.black,
+                        activeColor: index == currentIndex
+                            ? AppTheme.black
+                            : AppTheme.grey,
                         size: const Size.square(8),
                         activeSize: const Size(8, 8),
                       ),

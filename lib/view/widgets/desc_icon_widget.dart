@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:share_plus/share_plus.dart';
 
 class IconWidget extends ConsumerWidget {
   const IconWidget({super.key});
@@ -52,27 +53,7 @@ class IconWidget extends ConsumerWidget {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    // const content = 'hello';
-
-                    try {
-                      // await Share.share(content);
-                    } catch (error) {
-                      debugPrint(error.toString());
-                    }
-
-                    showModalBottomSheet(
-                      backgroundColor: Colors.black54,
-                      // ignore: use_build_context_synchronously
-                      context: context,
-                      builder: (context) => const SizedBox(
-                        height: 300,
-                        child: Center(
-                            child: Text(
-                          'Loding ......',
-                          style: TextStyle(color: Colors.white60),
-                        )),
-                      ),
-                    );
+                    await Share.share("share");
                   },
                   child: const Icon(
                     Icons.share_outlined,

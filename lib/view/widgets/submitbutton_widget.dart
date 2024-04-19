@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:promilo_task/controler/providers/auth_provider.dart';
+import 'package:promilo_task/core/theme/app_theme.dart';
 
 class SubmitButtonWidget extends HookConsumerWidget {
   final GlobalKey<FormState> formKey;
@@ -28,7 +29,7 @@ class SubmitButtonWidget extends HookConsumerWidget {
         },
         child: const Text(
           "Submit",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: AppTheme.submitBtn, fontSize: 20),
         ));
   }
 }

@@ -84,40 +84,40 @@ class CardWidget extends StatelessWidget {
               top: 90,
               left: 20,
               child: CircleAvatar(
-                  radius: 28,
+                  radius: 25,
                   backgroundImage: NetworkImage(
                       'https://img.pikbest.com/origin/09/28/50/096pIkbEsTsPx.jpg!w700wp'))),
           const Positioned(
             top: 90,
-            left: 60,
+            left: 50,
             child: CircleAvatar(
-                radius: 28,
+                radius: 25,
                 backgroundImage: NetworkImage(
-                    'https://img.lovepik.com/free-png/20220127/lovepik-business-team-discussing-work-in-office-png-image_401889976_wh1200.png')),
+                    'https://img.pikbest.com/origin/09/28/50/096pIkbEsTsPx.jpg!w700wp')),
           ),
           const Positioned(
               top: 90,
-              left: 110,
+              left: 90,
               child: CircleAvatar(
-                radius: 28,
+                radius: 25,
                 backgroundImage: NetworkImage(
-                    "https://ouch-cdn2.icons8.com/jHqd26mPjPfLjckhiAyq9KLw98UFGMmLp11QwBQuG8E/rs:fit:573:456/extend:false/wm:1:re:0:0:0.8/wmid:ouch/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMjE4/Lzk2YTg3NjExLWNl/MTItNGI1Zi1hMWRi/LWQ3OGJjZTFkMWMw/YS5wbmc.png"),
+                    "https://img.pikbest.com/origin/09/28/50/096pIkbEsTsPx.jpg!w700wp"),
               )),
           const Positioned(
               top: 90,
-              left: 160,
+              left: 130,
               child: CircleAvatar(
-                radius: 28,
+                radius: 25,
                 backgroundImage: NetworkImage(
-                    "https://e0.pxfuel.com/wallpapers/363/578/desktop-wallpaper-business-man-working-and-writing-in-laptop-office-desk-background-png.jpg"),
+                    "https://img.pikbest.com/origin/09/28/50/096pIkbEsTsPx.jpg!w700wp"),
               )),
           const Positioned(
               top: 90,
-              left: 210,
+              left: 170,
               child: CircleAvatar(
-                radius: 28,
+                radius: 25,
                 backgroundImage: NetworkImage(
-                    "https://i.pinimg.com/736x/9d/d9/f3/9dd9f38afd850f9514d8664114448fab.jpg"),
+                    "https://img.pikbest.com/origin/09/28/50/096pIkbEsTsPx.jpg!w700wp"),
               ))
         ]);
       },
