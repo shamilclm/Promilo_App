@@ -66,7 +66,7 @@ class CardWidget extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5)),
                             backgroundColor:
                                 const Color.fromARGB(255, 15, 85, 143),
-                            minimumSize: Size(140, 40)),
+                            minimumSize: const Size(140, 40)),
                         onPressed: () {},
                         child: const Text(
                           'See more',

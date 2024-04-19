@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:promilo_task/core/theme/app_theme.dart';
 import 'package:promilo_task/view/widgets/bot_navigation_widget.dart';
 import 'package:promilo_task/view/widgets/homepage_imageslider_widget.dart';
@@ -74,7 +72,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBarWidget(),
+      bottomNavigationBar: const BottomNavigationBarWidget(),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:promilo_task/core/theme/app_theme.dart';
 
+// ignore: must_be_immutable
 class TextFieldWidget extends StatelessWidget {
   final bool ischecked;
   final String hinttext;

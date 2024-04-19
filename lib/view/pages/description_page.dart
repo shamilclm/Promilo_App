@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:promilo_task/core/theme/app_theme.dart';
 import 'package:promilo_task/view/widgets/bot_navigation_widget.dart';
 import 'package:promilo_task/view/widgets/desc_dotdecrator_widget.dart';
@@ -24,7 +23,7 @@ class DescriptionPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

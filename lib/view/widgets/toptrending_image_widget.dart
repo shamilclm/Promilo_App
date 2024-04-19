@@ -16,8 +16,8 @@ class TopImageWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return InkWell(
-      onTap: () => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => DescriptionPage())),
+      onTap: () => Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const DescriptionPage())),
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: SizedBox(
