@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:promilo_task/core/theme/app_theme.dart';
 
 class BottomNavigationBarWidget extends StatelessWidget {
   const BottomNavigationBarWidget({super.key});
@@ -6,7 +7,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      selectedItemColor: Colors.lightBlue,
+      selectedItemColor: AppTheme.skyBlue,
       unselectedItemColor: Colors.black,
       currentIndex: 2,
       elevation: 2,

@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:promilo_task/core/theme/app_theme.dart';
 
 final imageProvider = StateProvider<int>((ref) => 0);
 
@@ -46,9 +47,9 @@ class HomePageImageSliderWidget extends ConsumerWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Popular Meetups',
-                                style: TextStyle(color: Colors.white)),
+                                style: TextStyle(color: AppTheme.submitBtn)),
                             Text('India',
-                                style: TextStyle(color: Colors.white)),
+                                style: TextStyle(color: AppTheme.submitBtn)),
                           ],
                         ),
                       ),

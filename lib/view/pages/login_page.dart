@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:promilo_task/core/theme/app_theme.dart';
 import 'package:promilo_task/view/widgets/submitbutton_widget.dart';
 import 'package:promilo_task/view/widgets/submitted_media_widget.dart';
 import 'package:promilo_task/view/widgets/textfeild_widget.dart';
@@ -107,13 +108,13 @@ class LoginPage extends HookConsumerWidget {
                       style: TextStyle(
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
-                          color: Colors.blue),
+                          color: AppTheme.button),
                     ),
                     Text("Sign Up",
                         style: TextStyle(
                             fontSize: 19,
                             fontWeight: FontWeight.w600,
-                            color: Colors.blue))
+                            color: AppTheme.button))
                   ],
                 ),
                 const SizedBox(

@@ -32,13 +32,18 @@ class CardWidget extends StatelessWidget {
                           width: 50,
                           height: 50,
                           decoration: BoxDecoration(
-                              image: const DecorationImage(
-                                  image: AssetImage(
-                                "assets/images/lovepik-a-black-leaf-png-image_401568860_wh1200.png",
-                              )),
                               borderRadius: BorderRadius.circular(30),
                               border:
-                                  Border.all(color: Colors.black, width: 2))),
+                                  Border.all(color: Colors.black, width: 2)),
+                          child: Center(
+                            child: Image.asset(
+                              "assets/images/leaf.png",
+                              width: 24,
+                            ),
+                          )),
+                      const SizedBox(
+                        width: 5,
+                      ),
                       const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
